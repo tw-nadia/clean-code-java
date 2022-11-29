@@ -25,7 +25,7 @@ public class Movie {
         return title;
     }
 
-    double getMovieCost( int daysRented) {
+    double getCost( int daysRented) {
         double amount = 0;
         switch (priceCode) {
             case REGULAR:
