@@ -11,8 +11,8 @@ public class Customer {
         this.name = name;
     }
 
-    public void addRental(Rental arg) {
-        rentals.add(arg);
+    public void addRental(Rental rental) {
+        rentals.add(rental);
     }
 
     public String getName() {
@@ -68,7 +68,8 @@ public class Customer {
     private int getTotalFrequentRenterPoints(){
         int frequentRenterPoints =0;
         for (Rental rental : rentals) {
-            frequentRenterPoints += rental.movie.getFrequentRenterPoints(rental.getDaysRented());
+            frequentRenterPoints +=
+                    rental.getFrequentRenterPoints(rental.getDaysRented());
         }
         return frequentRenterPoints;
     }
